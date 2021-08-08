@@ -1,0 +1,253 @@
+/*css reset=same design apply to all*/
+/*good place to check out gradient is grabient.com,dribble,behance.ALL you need to do is c/p the colour code from there and bring to vs code.*/
+/*html{
+    height:100%;keep this initially when website choto thake.
+}*/
+html{
+    background-image: linear-gradient(#FC5E55 , #FA4083);
+}
+body{
+    /*background-color: #FC5E55 ;*/
+    /*background-image: linear-gradient(#FC5E55 , #FA4083);*/
+    background-image: url(images/image-lion-background.png);
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+    font-size: 1.125rem;
+    /*font-weight: used when roboto te aro font thakto besides 300*/;
+    background-repeat: no-repeat;
+    background-position:top center;
+}
+.container{
+    width: 1024px;
+    /*background-color: rgb(5, 160, 108);*/
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header{
+    /*background-color: rgb(5, 112, 71);*/
+    /*min-height: 100px;*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;/*hr tag under header in html use o kora jeto but that kind of will be nedded to do in every page so we styled it in css.Also hr is bit oudated.*/
+}
+main{
+    /*background-color: rgb(80, 175, 139);*/
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+}
+.main2{
+    min-height: 300px;
+    padding-top: 20px;
+}
+.cards{
+    /*background-color: rgb(63, 238, 171);*/
+    /*min-height: 300px;*/
+    display: flex;/*needs to be done to the parent tag.*/
+    justify-content: space-between;
+    text-align: center;
+
+}
+/*by default 3 cards come one on top of another for which flex box comes into use.*/
+.card1{
+    /*background-color: rgb(180, 82, 189);*/
+    background-image: url(images/image-background-card1.jpg);
+    background-size: cover;
+    background-position:bottom;
+    min-height: 250px;
+    width: 30%;
+    /*margin-right: 20px;*/
+}
+.card2{
+    /*background-color: rgb(218, 18, 236);*/
+    background-image: url(images/image-background-card2.jpg);
+    background-size: cover;
+    background-position:center;
+    min-height: 250px;
+    width: 30%;
+    /*margin-right: 20px;*/
+}
+.card3{
+    /*background-color: rgb(121, 49, 128);*/
+    background-image: url(images/image-background-card3-b.jpg);
+    background-size: cover;
+    background-position:bottom;
+    min-height: 250px;
+    width: 30%;
+}
+.herobox1{
+    /*width:50%;*/
+    /*background-color: rgb(32, 177, 235);*/
+    flex:2;/*display flex kothata should be in direct parent ei case e jemon it is main.*/
+    padding-right: 100px;
+}
+.herobox2{
+    /*width:50%;*/
+    /*background-color:cornsilk;*/
+    flex:1;
+}
+nav{
+    /*height: 40px;*/
+    padding-top: 14px;
+    padding-bottom: 14px;
+    text-align: center;
+    text-decoration: none;
+
+}
+h1{
+    font-size: 3.25rem;/*rem=0.625*whatever in px*/
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.295);
+}
+}/*if there are two h1 by any chance the one present further down that ones specifications will be considered.*/
+h2{
+    font-size: 2rem;/*rem=0.625*whatever in px*/
+    font-family: 'Playfair Display', serif;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+p{
+    line-height: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+.card1, .card2, .card3{
+    padding: 30px 30px 20px 30px;/*overall cards ka padding*/
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.226);
+
+}
+.cards p{/*compound-selector*/
+    font-size: 0.85rem;
+    line-height: 1.2rem;
+    /*margin: 20px 30px 20px 30px;shortcut it goes top,right,bottom,left(clock-wise)*/
+    margin-top: 10px;
+}
+/*compound selector is used here mane only when inside cards icons are there css stuff ta will apply*/
+.cards i{
+    font-size: 100px;/*treated like fonts*/
+    color:whitesmoke;
+    /*padding-top: 30px;*/
+}
+a{
+    text-decoration: none;
+    color: white;
+}/*eric meyer me bhi directly kar diya hai jo commented hai.*/
+.mybutton{
+    background-color: white;
+    color: #FA4083;
+    font-family: 'Playfair Display', serif;
+    padding: 11px 25px;
+    display: inline-block;/*na dile margin wont work otherwise*/
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.178);/*more dropshadows are available at w3 schools*/
+}
+.mybutton:hover{
+    /*making buttons hover,called pseudoclass,more hovwer options present at w3 schools*/
+    background-color: rgb(15, 207, 207);
+    transition-duration: 1s;
+}
+/*.herobox2 img{
+    border-radius: 12px; jodi img ta korte hoy eibhabe lkorte hobe.
+}*/
+nav .mybutton{
+   
+    background-color:#FC5E55;
+    /*padding: 11px,25px;*/
+    color: white; 
+    border: 1px solid white;
+    border-radius: 12px;
+    display: inline-block;
+    position: relative;
+}
+/*testimonials can be generated online via testimonial generator*/
+.testimonials{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.tbox{
+    width:47%;/*kom newa uchit cause padding tao add on hoy*/
+    padding:50px;
+    border:1px solid white;
+    box-sizing: border-box;
+    margin-top:50px;
+}
+/*.herobox1 :first-child{
+    color: antiquewhite;herobox er space ta dilam implying search for the child inside herobox
+}
+.herobox1 :last-child{
+    color: rgb(88, 90, 233);herobox er space ta dilam implying search for the child inside herobox
+}
+.tbox :last-child{last-of-type ta beshi specific r ki!
+    font-size: 0.8rem;
+}*/
+
+.tbox p:last-of-type{
+    font-size: 0.8rem;
+    padding-left: 50px;
+}
+.dropdown{
+    display:none;
+    position: absolute;
+    z-index: 1;
+    padding-top: 20px;
+    text-align: center;
+}
+
+nav .mybutton:hover .dropdown
+{
+    display: block;
+}
+.dropdown .mybutton{
+    margin:0px;
+    width: 120px;
+    background-color: white;
+    border-radius: 0px;
+}
+.dropdown .mybutton a{
+   color: #FA4083;
+}
+.dropdown .mybutton:hover{
+    background-color: rgb(12, 111, 197);
+    transition-delay: 100ms;
+}
+.input-wrapper{
+    margin-bottom: 30px;
+}
+input[type=text],input[type=email],textarea{
+    padding: 12px 20px;
+    width: 100%;
+    font-family:'Roboto', sans-serif;
+    font-size: 0.85rem;
+    box-sizing: border-box;
+}
+.newline{
+    display: block;
+    margin-bottom: 10px;
+}
+.margin-right-a{
+    margin-right: 30px;
+}
+input[type=radio]{
+    margin-right: 10px;
+}
+form .mybutton{
+    margin: 20px 0px;
+    border-radius: 0px;
+    font-size: 1rem;
+}
+/*select[type=name]{ 
+     width: 40%; 
+     font-family:'Roboto', sans-serif;
+ } */
+
+

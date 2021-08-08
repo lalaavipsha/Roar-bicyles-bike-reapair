@@ -1,0 +1,31 @@
+.navbutton
+{
+    background-color: aquamarine;
+    padding: 11px 25px;
+    width: 100px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+/*this turns-off the dropdown when not in use*/
+.dropdown-box
+{
+    display: none;
+    position: absolute;/*ekta nirdishto jaygay thakbe*/
+    z-index: 100;/*specifies stack-order*/
+    padding-top: 20px;
+    margin-left: -30px;/*negative padding hoyna but*/
+}
+/*this turns-on the dropdown when in use i.e. navbutton e upor e jabo jokhon tokhon*/
+.navbutton:hover .dropdown-box
+{
+    display: block;
+}
+/*to color the drop-down box*/
+.dropdown-box .navbutton{
+    background-color: cadetblue;
+}
+.dropdown-box .navbutton:hover{
+    background-color: rgb(207, 53, 221);
+    transition-delay: 100ms;
+}
